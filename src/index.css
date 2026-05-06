@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Orbitron", "Rajdhani", sans-serif;
+  --font-body: "Rajdhani", system-ui, sans-serif;
+  --color-void: #050507;
+  --color-panel: #0d0d12;
+  --color-panel-soft: #14141c;
+  --color-blood: #ff143c;
+  --color-blood-deep: #93081f;
+  --color-neon-purple: #a855f7;
+  --color-neon-pink: #ff2d7a;
+  --shadow-neon-red: 0 0 24px rgba(255, 20, 60, 0.32);
+  --shadow-neon-purple: 0 0 26px rgba(168, 85, 247, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 20, 60, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(168, 85, 247, 0.04) 1px, transparent 1px),
+    #050507;
+  background-size: 72px 72px;
+  color: #f4f4f5;
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+::selection {
+  background: rgba(255, 20, 60, 0.35);
+  color: #ffffff;
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(13, 13, 18, 0.76);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(18px);
+}
+
+.neon-line {
+  position: relative;
+}
+
+.neon-line::after {
+  position: absolute;
+  inset-inline: 0;
+  bottom: -1px;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(255, 20, 60, 0.75), rgba(168, 85, 247, 0.7), transparent);
+}
+
+.clip-corner {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+.scrollbar-cart {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 20, 60, 0.6) rgba(255, 255, 255, 0.06);
+}
