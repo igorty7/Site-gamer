@@ -1,4 +1,4 @@
-git initimport { FiCpu, FiGrid, FiHeadphones, FiMousePointer, FiSearch } from 'react-icons/fi'
+import { FiCpu, FiGrid, FiHeadphones, FiMousePointer, FiSearch } from 'react-icons/fi'
 import { FaGamepad, FaKeyboard } from 'react-icons/fa'
 import { categories } from '../data/products.js'
 
